@@ -25,3 +25,44 @@ function insertarElementoALaLista(texto) {
     document.querySelector("ul").appendChild(nuevoElemento);
 }
 
+const botonEliminarUltimoElemento = document.getElementById("botonEliminarUltimoElemento");
+
+botonEliminarUltimoElemento.addEventListener("click", function(){
+    eliminarUltimoElemento();
+});
+
+function eliminarUltimoElemento(){
+    const lista = document.querySelector("ul");
+    if (lista.lastElementChild) {
+        lista.removeChild(lista.lastElementChild);
+    }
+}
+
+const botonMostrarOcultar = document.getElementById("botonMostrarOcultar");
+
+botonMostrarOcultar.addEventListener("click", function(){
+    mostrarOcultarElemento();
+});
+
+function mostrarOcultarElemento(){
+    const elemento = document.getElementById("elementoParaOcultarMostrar");
+    if (elemento.style.display === "none") {
+        elemento.style.display = "block";
+    } else {
+        elemento.style.display = "none";
+    }
+}       
+
+
+const botonIncrementaContador= document.getElementById("botonIncrementaContador");
+const contador = document.getElementById("contador");
+
+botonIncrementaContador.addEventListener("click", function(){
+    incrementarContador();
+});
+
+function incrementarContador(){
+    let numeroContador = parseInt(contador.textContent);
+    numeroContador += 1;
+    contador.textContent = numeroContador.toString();
+}
