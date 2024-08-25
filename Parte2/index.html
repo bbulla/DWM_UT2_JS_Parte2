@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtro de Personas</title>
+    <style>
+      .error {
+        color: red;
+        display: none;
+      }
+
+      input {
+        margin-bottom: 1rem;
+      }
+    </style>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1>Lista de Personas</h1>
+    <input
+      type="text"
+      id="inputBusquedaPersonas"
+      placeholder="Buscar persona..."
+    />
+    <ul id="listaDePersonas"></ul>
+
+    <h1 style="margin-top: 5rem">Formulario de Registro</h1>
+    <form id="formularioDeRegistro">
+      <div>
+        <label for="inputNombre">Nombre:</label>
+        <input type="text" id="inputNombre" required />
+        <p id="errorNombre" class="error">El nombre es requerido</p>
+      </div>
+      <div>
+        <label for="contraseña">Contraseña:</label>
+        <input type="contraseña" id="contraseña" required />
+        <p id="errorContraseña" class="error">
+          La contraseña debe tener al menos 8 caracteres
+        </p>
+      </div>
+      <div>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" required />
+        <p id="errorEmail" class="error">
+          Ingrese un correo electrónico válido
+        </p>
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
+  </body>
+</html>
